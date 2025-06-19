@@ -1,0 +1,103 @@
+
+Aufgabe
+Analysiere mein bestehendes GitHub-Projekt für ein Hochzeits-App Template-System und verstehe die komplette Architektur und Implementierung.
+Projekt-Kontext
+Das GitHub-Repository enthält ein Multi-Tenant Hochzeits-App System mit folgenden Kernkomponenten:
+Bereits implementierte Features
+
+Benutzer-Template-System: Multi-Tenant Architektur im adminpanel für individuelle Hochzeits-Instanzen
+Firebase Integration: Datenbankschema mit vollständiger Collection-Isolation
+Admin-Dashboard: Verwaltungsfunktionen und Profilbild-Upload, Beschreibungstext
+Template-Isolation: Sichere Datentrennung zwischen Hochzeitsinstanzen
+Empty State Management: Behandlung neuer, unkonfigurierter Templates
+Deaktivierte Spotify-Integration: Für neue Instanzen standardmäßig ausgeschaltet
+
+Analyse-Auftrag
+1. Code-Struktur verstehen
+Durchsuche das Repository und identifiziere:
+
+Frontend-Komponenten: React/Next.js Struktur und Komponentenhierarchie
+Backend-Architektur: API-Endpunkte und Server-Logik
+Firebase-Konfiguration: Collections, Sicherheitsregeln und Datenmodelle
+Routing-System: Wie Templates und Benutzer-Navigation funktioniert
+State Management: Redux/Context oder andere State-Lösungen
+
+2. Datenbankschema analysieren
+Verstehe die Firebase-Struktur:
+
+Collection-Isolation: Wie Daten zwischen Templates getrennt sind
+Datenbeziehungen: Gäste, Events, Medien, Profile
+Sicherheitsregeln: Authentication und Authorization
+Indexierung: Performance-Optimierungen
+
+3. Template-System erkunden
+Analysiere das Multi-Tenant Setup:
+
+Template-Erstellung: Wie neue Instanzen erstellt werden
+Admin-Funktionen: Verwaltungsmöglichkeiten pro Template
+Datenisolation: Mechanismen zur Trennung der Instanzen
+Customization: Wie Templates angepasst werden können
+
+4. API-Endpunkte dokumentieren
+Identifiziere alle API-Routen:
+
+Template-Management: CRUD-Operationen
+Benutzer-Authentifizierung: Login/Logout/Registration
+Gäste-Verwaltung: RSVP-System und Einladungen
+Media-Upload: Bild- und Video-Handling
+Event-Management: Zeitpläne und Aktivitäten
+
+5. Frontend-Architektur verstehen
+Analysiere die UI-Struktur:
+
+Komponenten-Hierarchie: Wiederverwendbare UI-Elemente
+Template-Themes: Verschiedene Design-Varianten
+Responsive Design: Mobile und Desktop Layouts
+User Experience: Admin- vs. Gast-Interfaces
+
+Spezielle Aufmerksamkeit
+Galerie-System
+⚠️ KRITISCH: Verstehe das Galerie-System genau, da bei Änderungen die Haupt-Web-App NICHT berührt werden darf. Analysiere:
+
+Wo die Galerie-Logik implementiert ist
+Wie Bilder pro Template isoliert werden
+Upload- und Display-Mechanismen
+Berechtigungssystem für Medien
+
+Datenisolation
+Verstehe die Implementierung der Template-Isolation:
+
+Middleware: Wie Requests zu korrekten Templates geleitet werden
+Database Queries: Wie Collection-Isolation funktioniert
+Session Management: Benutzer-Zuordnung zu Templates
+Error Handling: Was passiert bei fehlerhaften Zugriffen
+
+Erwartete Erkenntnisse
+Technische Architektur
+
+Framework: Next.js/React Setup und Konfiguration
+State Management: Wie Anwendungszustand verwaltet wird
+Deployment: Wie die App deployed wird
+Environment: Entwicklungs- vs. Produktionsumgebung
+
+Business Logic
+
+Template-Lifecycle: Von Erstellung bis zur Löschung
+Benutzer-Rollen: Admin vs. Gast Berechtigungen
+Workflow: Typischer Anwendungsablauf
+Customization: Anpassungsmöglichkeiten pro Template
+
+Performance & Sicherheit
+
+Caching: Wie Daten gecacht werden
+Optimization: Performance-Verbesserungen
+Security: Sicherheitsmechanismen und Schwachstellen
+Scalability: Wie das System mit vielen Templates umgeht
+
+Wichtige Hinweise
+
+Nicht modifizieren: Analysiere nur, verändere keinen Code
+Vollständige Abdeckung: Verstehe alle Teile des Systems
+Kritische Bereiche: Besondere Aufmerksamkeit auf Galerie und Datenisolation
+
+Beginne mit der Repository-Struktur und arbeite dich systematisch durch alle Komponenten des Systems.
